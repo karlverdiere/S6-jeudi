@@ -1,0 +1,9 @@
+
+ <br>
+ <h1>Choose your crypto currency:</h1>
+
+ 	<div class="form-group">
+ 	<%= form_for @crypto, url: show_path do |f| %>
+ 		<%= f.collection_select :id, Crypto.order(:name),:id,:name, {class: "form-control"} %>
+ 	  	<%= f.submit "Get its price", {class: "btn btn-outline-dark"} %> <% end %>
+ 	</div>
